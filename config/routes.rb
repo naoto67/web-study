@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post :register, to: 'register_users#create'
   get :login, to: 'authenticate#new'
   post :login, to: 'authenticate#create'
+  get :logout, to: 'authenticate#destroy'
 end
