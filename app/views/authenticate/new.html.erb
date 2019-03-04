@@ -1,0 +1,10 @@
+<div class="container">
+  <%= form_with url: login_path do |f| %>
+    <div>
+      アカウント名:<%= f.text_field :id_name %>
+    </div>
+    <div>
+      <%= f.submit '送信' %>
+    </div>
+  <% end %>
+</div>
