@@ -1,10 +1,12 @@
 <div class="container">
   <% @tweets.each do |tweet| %>
-    <div>
-      <%= tweet.user.name %>
-    </div>
-    <div>
-      <%= tweet.content %>
+    <div class="tweet">
+      <div class="user-name">
+        ユーザ名 <%= tweet.user.name %>
+      </div>
+      <div class="tweet__content">
+        <%= tweet.content %>
+      </div>
     </div>
   <% end %>
 </div>
