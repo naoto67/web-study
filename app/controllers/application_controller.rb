@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
 
-  private
     def login(user)
       session[:user_id] = user.id
     end
@@ -15,6 +14,6 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-      redirect_to login_path if current_user
+      redirect_to login_path unless current_user
     end
 end

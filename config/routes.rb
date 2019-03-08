@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get :login, to: 'authenticate#new'
   post :login, to: 'authenticate#create'
   get :logout, to: 'authenticate#destroy'
+
+  resources :tweets, only: [:new, :create]
 end

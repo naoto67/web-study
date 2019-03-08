@@ -1,0 +1,10 @@
+<div class="container">
+  <%= form_with url: tweets_path do |f| %>
+    <div>
+      <%= f.text_area :content, size: '20x10' %>
+    </div>
+    <div>
+      <%= f.submit '送信' %>
+    </div>
+  <% end %>
+</div>

@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2019_03_02_145412) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", default: "", null: false
-    t.bigint "users_id", null: false
-    t.index ["users_id"], name: "index_tweets_on_users_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -24,5 +24,5 @@ ActiveRecord::Schema.define(version: 2019_03_02_145412) do
     t.index ["id_name"], name: "index_users_on_id_name", unique: true
   end
 
-  add_foreign_key "tweets", "users", column: "users_id"
+  add_foreign_key "tweets", "users"
 end

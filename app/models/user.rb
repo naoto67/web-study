@@ -11,5 +11,5 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 255 }
   validates :id_name, presence: true, length: { maximum: 255 }, uniqueness: true
 
-  has_many :tweets, dependent: :destroy, inverse_of: :users
+  has_many :tweets, dependent: :destroy, inverse_of: :user
 end
