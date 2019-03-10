@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get :logout, to: 'authenticate#destroy'
 
   resources :tweets, only: [:new, :create]
+
+  namespace :ajax do
+    resources :tweets, only: [:index]
+  end
 end
