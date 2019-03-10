@@ -91,6 +91,11 @@ bundle exec rails server
  ```bash
  bin/rails g migration create_users
  bin/rails g migration create_tweets
+
+ OR
+
+ bin/rails g model User
+ bin/rails g model Tweet
  ```
 
  db/migrate 以下のファイルがマイグレートファイルです。
